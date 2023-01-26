@@ -224,6 +224,9 @@ $light-gray: #343539;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      .tools__left {
+        display: none;
+      }
 
       .side__project__info__title {
         color: $white;
@@ -256,6 +259,9 @@ $light-gray: #343539;
       .side__project__info__container {
         padding: 1.5rem;
         background-color: rgba(46, 47, 51, 0.3);
+        .tools__right {
+          margin-top: 1rem;
+        }
         .right__side__title {
           font-size: 22px;
           margin-bottom: 0.5rem;
@@ -337,7 +343,7 @@ $light-gray: #343539;
   }
 }
 
-// 手機 RWD
+// 手機橫向 RWD
 @media screen and (max-width: 767px) {
   // navbar
   .navbar {
@@ -372,8 +378,9 @@ $light-gray: #343539;
     .homepage__button__container {
       height: 20%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       padding: 0rem;
+
       justify-content: center;
       .button__more {
         font-size: 20px;
@@ -384,13 +391,18 @@ $light-gray: #343539;
   // about page
   .about {
     .about__title__container {
+      height: 25%;
       .about__title {
         font-size: 18px;
         letter-spacing: 0.3rem;
+        width: 75%;
       }
     }
     .about__content {
+      flex-direction: row;
+      width: 75%;
       .about__left__side {
+        height: 90%;
         .info__container {
           .info {
             padding: 0;
@@ -430,25 +442,58 @@ $light-gray: #343539;
   // side project page
   .side__project {
     .side__project__title__container {
+      height: 25%;
       .side__project__title {
+        width: 75%;
         font-size: 18px;
         letter-spacing: 0.3rem;
       }
     }
     .side__project__content {
+      width: 75%;
+      height: 75%;
       padding: 0;
       margin-top: -1rem;
+      flex-direction: row;
       .side__project__left__side {
-        margin-bottom: 1rem;
+        margin-bottom: 0;
+        margin-right: 1rem;
+        .tools__left {
+          display: block;
+          padding: 1rem 0 1rem 1rem;
+          margin-top: -0.5rem;
+          .right__side__title {
+            font-size: 15px;
+            margin-bottom: 0.3rem;
+            color: $white;
+            &:not(:first-child) {
+              margin-top: 1.5rem;
+            }
+          }
+          .side__project__info {
+            color: $white;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            .notion__url {
+              color: #f3a133;
+            }
+          }
+        }
         .side__project__info__title {
-          font-size: 15px;
+          font-size: 13px;
+          margin-top: 1.5rem;
+          margin-bottom: 0.3rem;
         }
       }
       .side__project__right__side {
         .side__project__info__container {
-          padding: 0rem;
+          width: 100%;
+          padding: 1rem;
           background-color: rgba(46, 47, 51, 0.3);
-
+          .tools__right {
+            display: none;
+          }
           .right__side__title {
             font-size: 15px;
             margin-bottom: 0.5rem;
@@ -460,6 +505,69 @@ $light-gray: #343539;
           .side__project__info {
             font-size: 14px;
             line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 手機直向 RWD
+@media screen and (max-width: 539px) {
+  // homepage
+  .homepage {
+    .homepage__button__container {
+      height: 20%;
+      display: flex;
+      align-items: center;
+      padding: 0rem;
+      justify-content: center;
+      .button__more {
+        font-size: 20px;
+      }
+    }
+  }
+
+  // about page
+  .about {
+    .about__title__container {
+      height: 20%;
+      .about__title {
+        width: 65%;
+      }
+    }
+    .about__content {
+      flex-direction: column;
+      width: 65%;
+    }
+  }
+  // side project page
+  .side__project {
+    .side__project__title__container {
+      height: 20%;
+      .side__project__title {
+        width: 65%;
+      }
+    }
+    .side__project__content {
+      width: 65%;
+      flex-direction: column;
+      .side__project__left__side {
+        margin-bottom: 1rem;
+        margin-right: 0;
+        .tools__left {
+          display: none;
+        }
+        .side__project__info__title {
+          font-size: 15px;
+        }
+      }
+      .side__project__right__side {
+        padding: 0;
+        .side__project__info__container {
+          .tools__right {
+            display: block;
+            margin-top: 1rem;
           }
         }
       }
