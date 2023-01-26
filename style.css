@@ -514,9 +514,14 @@ html {
     display: none;
   }
   .side__project .side__project__content .side__project__left__side .side__project__info__title {
+    margin: 0;
     font-size: 15px;
+    padding: 1rem;
   }
   .side__project .side__project__content .side__project__right__side {
+    padding: 0;
+  }
+  .side__project .side__project__content .side__project__right__side .side__project__info__container {
     padding: 0;
   }
   .side__project .side__project__content .side__project__right__side .side__project__info__container .tools__right {

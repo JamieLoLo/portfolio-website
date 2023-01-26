@@ -559,12 +559,15 @@ $light-gray: #343539;
           display: none;
         }
         .side__project__info__title {
+          margin: 0;
           font-size: 15px;
+          padding: 1rem;
         }
       }
       .side__project__right__side {
         padding: 0;
         .side__project__info__container {
+          padding: 0;
           .tools__right {
             display: block;
             margin-top: 1rem;
