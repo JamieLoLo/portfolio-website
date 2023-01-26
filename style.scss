@@ -20,6 +20,7 @@ $white: #fff;
 $dark-gray: #2e2f33;
 $light-gray: #343539;
 
+//電腦
 // navbar
 .navbar {
   position: absolute;
@@ -97,29 +98,34 @@ $light-gray: #343539;
   background-image: url(./image/about_background.svg);
   background-size: cover;
   .about__title__container {
-    padding: 3rem;
+    display: flex;
+    align-items: center;
+    height: 25%;
     .about__title {
-      font-size: 72px;
+      font-size: 62px;
       color: $white;
       text-align: center;
       padding: 1rem;
-      width: 900px;
+      width: 65%;
       margin: 0 auto;
       border: 1px solid $white;
       letter-spacing: 1rem;
     }
   }
   .about__content {
-    width: 900px;
+    width: 80%;
+    height: 75%;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
     .about__left__side {
-      width: 50%;
+      width: 40%;
+      height: 90%;
       background-color: rgba(46, 47, 51, 0.5);
       margin-right: 1rem;
       .photo__container {
         width: 100%;
-        height: 250px;
+        height: 50%;
         .photo {
           width: 100%;
           height: 100%;
@@ -127,8 +133,8 @@ $light-gray: #343539;
         }
       }
       .info__container {
-        height: 250px;
         font-size: 18px;
+        height: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -138,11 +144,13 @@ $light-gray: #343539;
           margin: auto 0;
           margin: 0;
           padding: 0.5rem 1rem;
+          font-size: 17px;
         }
       }
     }
     .about__right__side {
-      width: 50%;
+      width: 40%;
+      height: 90%;
       background-color: rgba(46, 47, 51, 0.5);
       .skill__title {
         font-size: 24px;
@@ -177,6 +185,7 @@ $light-gray: #343539;
     }
   }
 }
+// side project page
 .side__project {
   height: 100vh;
   width: 100%;
@@ -186,33 +195,39 @@ $light-gray: #343539;
   background-image: url(./image/side_project_background.svg);
   background-size: cover;
   .side__project__title__container {
-    padding: 3rem;
+    height: 25%;
+    display: flex;
+    align-items: center;
     .side__project__title {
-      font-size: 72px;
+      font-size: 62px;
       color: $white;
       text-align: center;
       padding: 1rem;
-      width: 900px;
+      width: 65%;
       margin: 0 auto;
       border: 1px solid $white;
       letter-spacing: 1rem;
     }
   }
   .side__project__content {
-    width: 900px;
+    width: 80%;
+    height: 75%;
     margin: 0 auto;
     display: flex;
     height: 65%;
+    justify-content: center;
+    align-items: center;
     .side__project__left__side {
-      width: 50%;
-      height: 100%;
+      width: 40%;
+      height: 90%;
       margin-right: 1rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       .side__project__info__title {
         color: $white;
-        font-size: 20px;
+        font-size: 22px;
         margin-bottom: 1rem;
         text-align: center;
       }
@@ -234,13 +249,13 @@ $light-gray: #343539;
       }
     }
     .side__project__right__side {
-      width: 50%;
+      width: 40%;
+      height: 90%;
       display: flex;
       align-items: center;
       .side__project__info__container {
         padding: 1.5rem;
         background-color: rgba(46, 47, 51, 0.3);
-
         .right__side__title {
           font-size: 22px;
           margin-bottom: 0.5rem;
@@ -249,13 +264,202 @@ $light-gray: #343539;
             margin-top: 1.5rem;
           }
         }
-
         .side__project__info {
           color: $white;
           font-weight: 300;
+          font-size: 18px;
           line-height: 24px;
           .notion__url {
             color: #f3a133;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 平板 RWD
+@media screen and (max-width: 960px) {
+  // about page
+  .about {
+    .about__title__container {
+      height: 20%;
+      .about__title {
+        font-size: 38px;
+      }
+    }
+    .about__content {
+      width: 65%;
+      height: 75%;
+      flex-direction: column;
+      .about__left__side {
+        width: 100%;
+        height: 90%;
+        background-color: rgba(46, 47, 51, 0.7);
+        margin-bottom: 1.5rem;
+        margin-right: 0;
+      }
+      .about__right__side {
+        width: 100%;
+        height: 90%;
+        background-color: rgba(46, 47, 51, 0.7);
+        .skill__container {
+          padding: 1rem;
+          .frontend__skills {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+  // side project page
+  .side__project {
+    .side__project__title__container {
+      height: 20%;
+      .side__project__title {
+        font-size: 38px;
+      }
+    }
+    .side__project__content {
+      width: 65%;
+      height: 75%;
+      flex-direction: column;
+      .side__project__left__side {
+        width: 100%;
+        height: 90%;
+        margin-right: 0;
+      }
+      .side__project__right__side {
+        width: 100%;
+        height: 90%;
+      }
+    }
+  }
+}
+
+// 手機 RWD
+@media screen and (max-width: 767px) {
+  // navbar
+  .navbar {
+    right: 1rem;
+    .navitem__container {
+      width: 22px;
+      height: 22px;
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+
+  // homepage
+  .homepage {
+    .title__container {
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0rem;
+      transform: translateY(10%);
+      .homepage__title__1 {
+        font-size: 32px;
+        margin-bottom: 1rem;
+      }
+      .homepage__title__2 {
+        font-size: 20px;
+      }
+    }
+    .homepage__button__container {
+      height: 20%;
+      display: flex;
+      align-items: center;
+      padding: 0rem;
+      justify-content: center;
+      .button__more {
+        font-size: 20px;
+      }
+    }
+  }
+
+  // about page
+  .about {
+    .about__title__container {
+      .about__title {
+        font-size: 18px;
+        letter-spacing: 0.3rem;
+      }
+    }
+    .about__content {
+      .about__left__side {
+        .info__container {
+          .info {
+            padding: 0;
+            font-size: 13px;
+          }
+        }
+      }
+      .about__right__side {
+        padding: 1rem 0rem;
+        .skill__title {
+          font-size: 15px;
+          height: 15%;
+          padding: 0.5rem;
+        }
+        .skill__container {
+          height: 85%;
+          padding: 0rem 1rem;
+          .skill__subtitle {
+            font-size: 15px;
+            padding: 0.5rem;
+            font-weight: 500;
+            text-align: center;
+          }
+          .frontend__skills {
+            margin-bottom: 0.5rem;
+          }
+          .skills {
+            font-size: 14px;
+            color: $white;
+            padding: 0rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  // side project page
+  .side__project {
+    .side__project__title__container {
+      .side__project__title {
+        font-size: 18px;
+        letter-spacing: 0.3rem;
+      }
+    }
+    .side__project__content {
+      padding: 0;
+      margin-top: -1rem;
+      .side__project__left__side {
+        margin-bottom: 1rem;
+        .side__project__info__title {
+          font-size: 15px;
+        }
+      }
+      .side__project__right__side {
+        .side__project__info__container {
+          padding: 0rem;
+          background-color: rgba(46, 47, 51, 0.3);
+
+          .right__side__title {
+            font-size: 15px;
+            margin-bottom: 0.5rem;
+            color: $white;
+            &:not(:first-child) {
+              margin-top: 0.75rem;
+            }
+          }
+          .side__project__info {
+            font-size: 14px;
+            line-height: 22px;
           }
         }
       }
