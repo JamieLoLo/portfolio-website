@@ -253,6 +253,14 @@ html {
   padding: 1.5rem;
   background-color: rgba(46, 47, 51, 0.3);
 }
+.side__project .side__project__content .side__project__right__side .side__project__info__container .side__project__link {
+  color: #f3a133;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.side__project .side__project__content .side__project__right__side .side__project__info__container .side__project__dot {
+  color: #fff;
+}
 .side__project .side__project__content .side__project__right__side .side__project__info__container .tools__right {
   margin-top: 1rem;
 }

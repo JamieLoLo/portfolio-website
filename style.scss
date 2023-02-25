@@ -259,6 +259,14 @@ $light-gray: #343539;
       .side__project__info__container {
         padding: 1.5rem;
         background-color: rgba(46, 47, 51, 0.3);
+        .side__project__link {
+          color: #f3a133;
+          font-size: 1.1rem;
+          cursor: pointer;
+        }
+        .side__project__dot {
+          color: #fff;
+        }
         .tools__right {
           margin-top: 1rem;
         }
