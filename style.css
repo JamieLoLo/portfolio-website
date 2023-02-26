@@ -396,9 +396,10 @@ html {
   .about .about__content {
     flex-direction: row;
     width: 75%;
+    height: 70%;
   }
   .about .about__content .about__left__side {
-    height: 90%;
+    height: 100%;
   }
   .about .about__content .about__left__side .info__container .info {
     padding: 0;
@@ -406,6 +407,7 @@ html {
   }
   .about .about__content .about__right__side {
     padding: 1rem 0rem;
+    height: 100%;
   }
   .about .about__content .about__right__side .skill__title {
     font-size: 15px;

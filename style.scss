@@ -427,8 +427,9 @@ $light-gray: #343539;
     .about__content {
       flex-direction: row;
       width: 75%;
+      height: 70%;
       .about__left__side {
-        height: 90%;
+        height: 100%;
         .info__container {
           .info {
             padding: 0;
@@ -438,6 +439,7 @@ $light-gray: #343539;
       }
       .about__right__side {
         padding: 1rem 0rem;
+        height: 100%;
         .skill__title {
           font-size: 15px;
           height: 15%;
